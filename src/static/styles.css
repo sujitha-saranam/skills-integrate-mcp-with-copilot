@@ -16,16 +16,83 @@ body {
 }
 
 header {
-  text-align: center;
-  padding: 20px 0;
+  padding: 20px 24px;
   margin-bottom: 30px;
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
 }
 
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
 header h1 {
   margin-bottom: 10px;
+}
+
+.login-toggle,
+.secondary-button,
+.close-button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.login-toggle {
+  background-color: #ffffff;
+  color: #1a237e;
+  padding: 10px 16px;
+  font-weight: 700;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.55);
+  z-index: 10;
+}
+
+.modal-content {
+  background: #fff;
+  width: min(420px, 90vw);
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.close-button {
+  background: transparent;
+  color: #444;
+  font-size: 28px;
+  line-height: 1;
+  padding: 0 6px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.secondary-button {
+  background: #e2e8f0;
+  color: #0f172a;
+  padding: 10px 15px;
 }
 
 main {
@@ -162,6 +229,16 @@ button {
 
 button:hover {
   background-color: #3949ab;
+}
+
+.admin-status {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 10px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 999px;
+  font-weight: 700;
 }
 
 .message {
