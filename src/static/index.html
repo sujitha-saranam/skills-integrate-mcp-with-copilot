@@ -8,9 +8,37 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div class="header-row">
+        <div>
+          <h1>Mergington High School</h1>
+          <h2>Extracurricular Activities</h2>
+        </div>
+        <button id="login-toggle" class="login-toggle" type="button">Admin Login</button>
+      </div>
     </header>
+
+    <div id="login-modal" class="modal hidden" aria-hidden="true">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Teacher Access</h3>
+          <button id="close-login-modal" class="close-button" type="button" aria-label="Close">×</button>
+        </div>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input id="username" name="username" type="text" required placeholder="teacher" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input id="password" name="password" type="password" required placeholder="Enter your password" />
+          </div>
+          <div class="modal-actions">
+            <button type="submit">Log In</button>
+            <button type="button" id="logout-button" class="secondary-button hidden">Log Out</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <main>
       <section id="activities-container">
@@ -23,6 +51,7 @@
 
       <section id="signup-container">
         <h3>Sign Up for an Activity</h3>
+        <div id="admin-status" class="admin-status hidden">Admin mode active</div>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
